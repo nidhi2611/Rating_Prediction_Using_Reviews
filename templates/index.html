@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Predicition</title>
+</head>
+<style>
+    body{
+			width: 100vw;
+			background-image: url(../static/home.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.container h2{
+			text-align: center;
+			text-decoration: underline;
+			text-transform: uppercase;
+			text-shadow:red;
+			color: black;
+			font-size: 50px;
+			margin-top: 10px;
+			letter-spacing: 1.5px;
+		}
+		form p, form textarea{
+			margin: 80px auto;
+			color: white;
+			text-align: center;
+		}
+		form p 
+		{
+		margin-bottom: 20px;
+		color: red;
+		font-size: 35px;
+		font-weight: bolder;
+		}
+		form textarea
+		{
+			background-image: linear-gradient(270deg,lightpink,lightskyblue);
+			opacity: 0.8;
+			font-size: 30px;
+			text-align: justify;
+			color: rgb(226, 32, 32);
+		}
+		form input
+		{
+			margin: 0 auto;
+			display: block;
+			margin-top: 10px;
+			background-color: red;
+			height: 40px;
+			width: 150px;
+			color: white;
+			border-radius: 15px;
+		}
+        form input .btn-info
+        {
+            margin-top: -200px;
+        }
+</style>
+<body>
+    
+	<header>
+		<div class="container">
+		<h2>Rating Prediciton</h2>
+	</div>
+	</header>
+    <div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Review Here</p>
+		<textarea name="message" rows="5" cols="60" style="display: block;align-self: center;"></textarea>
+		<input type="submit" class="btn-info" value="Predict Rating">	
+	</form>
+	</div>
+</body>
+</html>
