@@ -10,8 +10,15 @@
     
 	<header>
 		<div class="container">
-		<h2>Sentiments Analaysis</h2>
+		<h2>Rating Prediciton</h2>
 	</div>
 	</header>
+    <div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Review Here</p>
+		<textarea name="message" rows="5" cols="60" style="display: block;align-self: center;"></textarea>
+		<input type="submit" class="btn-info" value="Predict Rating">	
+	</form>
+	</div>
 </body>
 </html>
