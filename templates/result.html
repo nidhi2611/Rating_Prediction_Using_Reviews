@@ -17,6 +17,7 @@
 			font-variant: small-caps;
 			font-family: Arial, Helvetica, sans-serif;
 			margin-top: 10px;
+            font-size: 20px;
 		}
 		.text h2
 {
@@ -48,25 +49,25 @@ p
 		
 	</div>
 	</header>
-	<p> <span style="text-align: center;color: white;font-size: 30px;text-decoration: underline; margin-top: 0px; font-weight: bol;"><b>Review</b></span> : 
+	<p> <span style="text-align: center;color: yellowgreen;font-size: 30px;text-decoration: underline; margin-top: 0px; font-weight: bol;"><b>Review</b></span> : 
 		<p>
-	<span style="color: black; font-size: 40px;font-weight: bold; margin-top: 0;">	{{ review }} </span>
+	<span style="color: white; font-size: 20px;font-weight: bold; margin-top: 0;">	{{ review }} </span>
 	</p>
 	</p>
-	<p style="text-align: center;color: white;font-size: 30px;text-decoration: underline; margin-top: 0px; font-weight: bold;"><b> Rating </b></p>
+	<p style="text-align: center;color: yellowgreen;font-size: 30px;text-decoration: underline; margin-top: 0px; font-weight: bold;"><b> Rating </b></p>
 	<br>
 
 	<div class="results">
 	{% if prediction == 1 %}
-	<h2 style="color:black; text-align: center;margin-top: 0px;">Very Poor ( * ) </h2>
+	<h2 style="color:white; text-align: center;margin-top: 0px;">Very Poor ( * ) </h2>
 	{% elif prediction == 2 %}
-	<h2 style="color:black;text-align: center; margin-top: 0px;"> Poor ( * * ) </h2>
+	<h2 style="color:white;text-align: center; margin-top: 0px;"> Poor ( * * ) </h2>
 	{% elif prediction == 3 %}
-	<h2 style="color:black;text-align: center; margin-top: 0px;"> Average ( * * * ) </h2>
+	<h2 style="color:white;text-align: center; margin-top: 0px;"> Average ( * * * ) </h2>
 	{% elif prediction == 4 %}
-	<h2 style="color:black;text-align: center; margin-top: 0px;"> Good ( * * * * * ) </h2>
+	<h2 style="color:white;text-align: center; margin-top: 0px;"> Good ( * * * * * ) </h2>
 	{% elif prediction == 5 %}
-	<h2 style="color:black;text-align: center; margin-top: 0px;"> Best ( * * * * * ) </h2>
+	<h2 style="color:white;text-align: center; margin-top: 0px;"> Best ( * * * * * ) </h2>
 	{% endif %}
 
 	</div>
